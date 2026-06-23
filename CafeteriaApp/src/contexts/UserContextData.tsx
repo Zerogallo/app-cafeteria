@@ -21,7 +21,7 @@ type UserContextData = {
 
 const UserContext = createContext<UserContextData>({} as UserContextData);
 
-export const UserProvider: React.FC = ({ children }) => {
+export const UserProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [token, setToken] = useState<string | null>(null);
 

@@ -47,7 +47,7 @@ export default function ScannerScreen() {
     <View style={styles.container}>
       <BarCodeScanner
         onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
-        style={StyleSheet.absoluteFillObject}
+        style={StyleSheet.absoluteFill}
       />
       {scanned && <Button title="Escanear novamente" onPress={() => setScanned(false)} />}
     </View>
